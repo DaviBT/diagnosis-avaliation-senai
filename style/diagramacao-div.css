@@ -1,0 +1,33 @@
+section{
+    display:flex;
+    justify-content:space-around;
+    margin: 1em 3em 1em 3em;
+    flex-wrap: wrap;
+}
+
+section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+}
+ section > div{
+    border-radius:1rem;
+    overflow:hidden;
+    background-color:var(--bgcolor1);
+    height: fit-content;
+}
+section > div > .image{
+    height:20rem;
+    overflow:hidden;
+    width:100%;
+}
+ section > div > .image > img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    transition-duration:.8s;
+    animation:ease-in-out;
+}
+ section > div:hover > .image > img{
+    transform:scale(1.1);
+}
